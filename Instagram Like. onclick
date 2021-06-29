@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-
 <button class="like-btn">Like</button>
 
 <style>
@@ -28,5 +24,3 @@
     }
 
 </script>
-</body>
-</html>
