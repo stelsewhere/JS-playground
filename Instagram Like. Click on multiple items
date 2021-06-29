@@ -1,0 +1,25 @@
+
+<button class="like-btn">Like</button>
+
+<style>
+    .like-btn {
+        background-image: url('../img/unliked.svg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+}
+
+    .like-active {
+        background-image: url('../img/liked.svg');
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.like-btn').forEach(item => {
+	    item.addEventListener('click', event => {
+		  item.classList.toggle('like-active')
+	    })
+    })
+</script>
