@@ -1,0 +1,23 @@
+
+<div id="likes">
+        <span id="click">Click</span>
+        <span id="like">Like</span>
+</div>
+
+<style>
+    div#likes span#click {
+        display: inline-block;
+    }
+
+    div#likes:hover span#click {
+        display: none;
+    }
+
+    div#likes span#like {
+        display: none;
+    }
+
+    div#likes:hover span#like {
+        display: inline;
+    }
+</style>
