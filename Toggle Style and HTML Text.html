@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head> 
+<body>
+
+    <button onclick="changeText()" id="change-p">
+        Click</button>
+    <p id ='text'>Change this text</p> 
+    
+<script>
+    function changeText() {
+        let text = document.getElementById('text');
+        if (text.innerHTML === "Change this text") {
+            text.innerHTML = "Text changed";
+            text.style.color = "red";
+            text.style.fontFamily = "Helvetica";
+            text.style.fontSize = "large";
+        } else {
+            text.innerHTML = "Change this text";
+            text.style.color = "black";
+            text.style.fontFamily = "serif";
+            text.style.fontSize = "small";
+        }
+}
+</script>
+
+</body>
+</html>
