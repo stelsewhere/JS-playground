@@ -1,0 +1,5 @@
+<span
+   onmouseover="this.innerText='click';"
+   onmouseout="this.innerText='like';">
+   Click
+</span>
