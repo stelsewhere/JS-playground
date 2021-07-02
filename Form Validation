@@ -1,0 +1,14 @@
+<form name="form" onsubmit="return validateForm()">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+</form>
+
+ <script>
+     function validateForm() {
+     let input = document.forms["form"]["fname"].value;
+     if (input == "") {
+        alert("Fill out your name");
+        return false;
+        }
+     }
+  </script>   
