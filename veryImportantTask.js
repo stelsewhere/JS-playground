@@ -13,7 +13,7 @@
 // isUndefined('hello');
 // => false
 function isUndefined (text) {
-    if (text == undefined) {
+    if (text === undefined) {
         return true;
     } else {
         return false;
@@ -27,7 +27,7 @@ console.log(isUndefined())
 // isNull(null);
 // => true
 let isNull;
-if (isNull == null) {
+if (isNull === null) {
     console.log(true);
 };
 
@@ -38,15 +38,13 @@ if (isNull == null) {
 // => false
 // isBoolean(false);
 // => true
-let isBoolean = function(a) {
-    if (a >= 1) {
-        return true;
-    } else {
-        return false;
-    }
-}
+isBoolean()
+function isBoolean() {
+    let value = 10 > 9;
 
-console.log(isBoolean(2));
+    if (value === Boolean);
+    console.log(true);
+} 
 
 
 // Создать функцию size которая принимает в качестве единственного входящего параметра массив и возвращает количество элементов в массиве.
@@ -89,12 +87,17 @@ function last() {
 // Пример работы:
 // getPositiveNumbers([10, -5, 100, -2, 1000]);
 // => [10, 100, 1000]
-let x = [10, -5, 100, -2, 1000];
-x = function getPositiveNumbers(x) {
-    if (x >= 0) {
-        console.log(x)
+function getPositiveNumbers() {
+    var arr = [1, -1, -2, 4, 5, -8];
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) {
+            console.log(arr[i]);
+        }
     }
 }
+
+getPositiveNumbers();
 
 // Создать функцию isEven которая возвращает true если число четное
 // или false в противном случае.
@@ -105,33 +108,87 @@ x = function getPositiveNumbers(x) {
 // => true
 // isEven(7);
 // => false
+function isEven() {
+    var arr = [1, 2, 3, 4, 5];
 
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            console.log(true)
+        } else {
+            console.log(false)
+        }
+    } 
+}
+
+isEven()
 
 // Создать функцию push которая принимает массив и произвольное значение 
-// и возвращает копию массива + произвольное значение (которое находится в конце массива)
+// и возвращает копию массива + произвольное значение (которое 
+// находится в конце массива)
 // Пример работы:
 // push([1, 2, 3, 4], 5);
 // => [1, 2, 3, 4, 5]
+numbers = [1, 2, 3];
+numbersCopy = [];
 
+function push() {
+    for (i = 0; i < numbers.length; i++) {
+        numbersCopy[i] = numbers[i];  
+}
+console.log(numbersCopy + "," + [4]);
 
+}
+push();
 
-// Создать функцию unshift которая принимает массив и произвольное значение и возвращает копию массива + произвольное значение (которое находится в начале массива)
+// Создать функцию unshift которая принимает массив и произвольное 
+// значение и возвращает копию массива + произвольное значение 
+// (которое находится в начале массива)
 // Пример работы:
 // unshift([1, 2, 3, 4], 5);
 // => [5, 1, 2, 3, 4]
+numbers = [1, 2, 3];
+numbersCopy = [];
 
+function unshift() {
+    for (i = 0; i < numbers.length; i++) {
+        numbersCopy[i] = numbers[i];  
+    }
+console.log(0 + "," + numbersCopy);
+}
+unshift();
 
-// Создать функцию pop которая принимает массив и возвращает копию массива без последнего значения.
+// Создать функцию pop которая принимает массив и возвращает копию 
+// массива без последнего значения.
 // Пример работы:
 // pop([1, 2, 3, 4]);
 // => [1, 2, 3]
+numbers = [1, 2, 3, 4];
+numbersCopy = [];
 
+function pop(arr) {
+    if(arr.length > 0)
+    arr.length = 3;
+    return arr;
+}
 
-// Создать функцию shift которая принимает массив и возвращает копию массива без первого значения.
+var numbersCopy = pop(numbers);
+console.log(numbersCopy);
+
+// Создать функцию shift которая принимает массив и возвращает 
+// копию массива без первого значения.
 // Пример работы:
 // shift([1, 2, 3, 4]);
 // => [2, 3, 4]
+numbers = [1, 2, 3, 4];
+numbersCopy = [];
 
+function shift(arr) {
+    delete numbers[0];
+    return arr
+}
+
+var numbersCopy = shift(numbers);
+console.log(numbersCopy);
 
 // Создать функцию compact которая принимает в качестве единственного входящего параметра массив произвольных значений и возвращает копию массива без undefined значений.
 // Пример работы:
