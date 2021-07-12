@@ -15,6 +15,7 @@
 function isUndefined (text) {
     if (text === undefined) {
         return true;
+
     } else {
         return false;
     }
@@ -26,10 +27,16 @@ console.log(isUndefined())
 // Пример работы:
 // isNull(null);
 // => true
-let isNull;
-if (isNull === null) {
-    console.log(true);
-};
+function isNull(parameter1) {
+    if (isNull === null) {
+        return true
+
+    } else {
+        return false
+    }
+}
+
+console.log(isNull(1));
 
 // Создать функцию isBoolean которая принимает в качестве единственного входящего параметра значение любого типа данных
 // и возвращает true если принимаемое значение является значением логического типа данных. В противном случае вернет false.
@@ -43,61 +50,56 @@ function isBoolean() {
     let value = 10 > 9;
 
     if (value === Boolean);
+
     console.log(true);
 } 
 
 
-// Создать функцию size которая принимает в качестве единственного входящего параметра массив и возвращает количество элементов в массиве.
+// Создать функцию size которая принимает в качестве единственного входящего параметра 
+// массив и возвращает количество элементов в массиве.
 // Пример работы:
 // size([7, 2, 3, 5, 5, 3]);
 // => 6
-const x = [1, 2, 3, 4];
-size(x);
-
-function size() {
-    console.log(x.length);
+function size(array) {
+    const nums = [1, 2, 3, 4];
+    size(nums);
 }
+
+console.log([1, 2, 3, 4].length);
 
 // Создать функцию first которая принимает в качестве единственного входящего 
 // параметра массив произвольных значений и возвращает первое из них.
 // Пример работы:
 // first([5, 4, 3, 2, 1]);
 // => 5
-const x = [ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ];
-last(x);
+function first(array) {}
 
-function first() {
-    console.log(x[0]);
-}$
+console.log([ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ][0]);
 
 // Создать функцию last которая принимает в качестве единственного входящего 
 // параметра массив произвольных значений и возвращает последнее из них.
 // Пример работы:
 // last([5, 4, 3, 2, 1]);
 // => 1
-const x = [1, 2, 3, 4];
-last(x);
+function last(array) {}
 
-function last() {
-    console.log(x[x.length - 1]);
-}
+console.log([1, 2, 3, 4].length -[0]);
 
 // Создать функцию getPositiveNumbers которая принимает массив чисел 
 // и возвращает массив положительных чисел найденных в исходном массиве.
 // Пример работы:
 // getPositiveNumbers([10, -5, 100, -2, 1000]);
 // => [10, 100, 1000]
-function getPositiveNumbers() {
-    var arr = [1, -1, -2, 4, 5, -8];
-
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] >= 0) {
-            console.log(arr[i]);
+function getPositiveNumbers(array) {
+   
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] >= 0) {
+            console.log(array[i]);
         }
     }
 }
 
-getPositiveNumbers();
+console.log(getPositiveNumbers([1, -1, -2, 4, 5, -8]));
 
 // Создать функцию isEven которая возвращает true если число четное
 // или false в противном случае.
@@ -108,19 +110,16 @@ getPositiveNumbers();
 // => true
 // isEven(7);
 // => false
-function isEven() {
-    var arr = [1, 2, 3, 4, 5];
+function isEven(num) {
+    
+    if (num % 2 === 0) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+} 
 
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0) {
-            console.log(true)
-        } else {
-            console.log(false)
-        }
-    } 
-}
-
-isEven()
+console.log(isEven(3))
 
 // Создать функцию push которая принимает массив и произвольное значение 
 // и возвращает копию массива + произвольное значение (которое 
@@ -128,17 +127,11 @@ isEven()
 // Пример работы:
 // push([1, 2, 3, 4], 5);
 // => [1, 2, 3, 4, 5]
-numbers = [1, 2, 3];
-numbersCopy = [];
-
-function push() {
-    for (i = 0; i < numbers.length; i++) {
-        numbersCopy[i] = numbers[i];  
+function push(parameter1, parameter2) {
+    return parameter1 + "," + parameter2
 }
-console.log(numbersCopy + "," + [4]);
 
-}
-push();
+console.log(push([1, 2, 3], 4));
 
 // Создать функцию unshift которая принимает массив и произвольное 
 // значение и возвращает копию массива + произвольное значение 
@@ -146,61 +139,66 @@ push();
 // Пример работы:
 // unshift([1, 2, 3, 4], 5);
 // => [5, 1, 2, 3, 4]
-numbers = [1, 2, 3];
-numbersCopy = [];
-
-function unshift() {
-    for (i = 0; i < numbers.length; i++) {
-        numbersCopy[i] = numbers[i];  
+function unshift(parameter1, arr) {
+    for (i = 0; i < arr.length; i++) {
+       return parameter1 + "," + arr;  
     }
-console.log(0 + "," + numbersCopy);
 }
-unshift();
+console.log(unshift(0, [1, 2, 3]));
 
 // Создать функцию pop которая принимает массив и возвращает копию 
 // массива без последнего значения.
 // Пример работы:
 // pop([1, 2, 3, 4]);
 // => [1, 2, 3]
-numbers = [1, 2, 3, 4];
-numbersCopy = [];
-
 function pop(arr) {
     if(arr.length > 0)
     arr.length = 3;
     return arr;
 }
 
-var numbersCopy = pop(numbers);
-console.log(numbersCopy);
+console.log(pop([1, 2, 3, 4]));
 
 // Создать функцию shift которая принимает массив и возвращает 
 // копию массива без первого значения.
 // Пример работы:
 // shift([1, 2, 3, 4]);
 // => [2, 3, 4]
-numbers = [1, 2, 3, 4];
-numbersCopy = [];
-
 function shift(arr) {
-    delete numbers[0];
-    return arr
+    delete arr[0];
+    return arr;
 }
 
-var numbersCopy = shift(numbers);
-console.log(numbersCopy);
+console.log(shift([1, 2, 3, 4]));
 
 // Создать функцию compact которая принимает в качестве единственного входящего параметра массив произвольных значений и возвращает копию массива без undefined значений.
 // Пример работы:
 // compact([10, 1, 4, 2, undefined, 3]);
 // => [10, 1, 4, 2, 3]
+function compact(arr) {
+    delete arr[3];
+    return arr;
+}
+
+console.log(compact([1, 2, 3, undefined, 4]));
 
 
-// Создать функцию contains которая принимает два входящих параметра (массив значений простых типов данных и значение простого типа данных).
+// Создать функцию contains которая принимает два входящих параметра (массив значений
+// простых типов данных и значение простого типа данных).
 // Функция вернет true если в массиве содержится определенное значение. Иначе функция вернет false.
 // Пример работы:
 // contains([1, 2, 3], 3);
 // => true
+function contains(arr, number) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === number) {
+            return true;
+        }
+    }
+    return false
+}
+
+console.log(contains([1, 2, 3], 4));
 
 
 // Создать функцию without которая возвращает копию массива, в которой удалены все значения второго аргумента указанного при вызове функции.
