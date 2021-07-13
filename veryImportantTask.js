@@ -45,45 +45,52 @@ console.log(isNull(1));
 // => false
 // isBoolean(false);
 // => true
-isBoolean()
-function isBoolean() {
-    let value = 10 > 9;
-
-    if (value === Boolean);
-
-    console.log(true);
+function isBoolean(myVal) {
+    if (typeof myVal === Boolean); {
+        return true
+    }
+    return false
 } 
 
+console.log(isBoolean(true));
 
 // Создать функцию size которая принимает в качестве единственного входящего параметра 
 // массив и возвращает количество элементов в массиве.
 // Пример работы:
 // size([7, 2, 3, 5, 5, 3]);
 // => 6
-function size(array) {
-    const nums = [1, 2, 3, 4];
-    size(nums);
+var size = function (array) {
+    var result = array.length;
+
+    return result;
 }
 
-console.log([1, 2, 3, 4].length);
+var resultOfSize = size([1, 2, 3]);
+console.log('resultOfSize', resultOfSize);
 
 // Создать функцию first которая принимает в качестве единственного входящего 
 // параметра массив произвольных значений и возвращает первое из них.
 // Пример работы:
 // first([5, 4, 3, 2, 1]);
 // => 5
-function first(array) {}
+var first =  function(array) {
+    return array[0];
+}
 
-console.log([ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ][0]);
+var firstElement = first([ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ])
+console.log('firstElement', firstElement);
 
 // Создать функцию last которая принимает в качестве единственного входящего 
 // параметра массив произвольных значений и возвращает последнее из них.
 // Пример работы:
 // last([5, 4, 3, 2, 1]);
 // => 1
-function last(array) {}
+var last =  function(array) {
+    return array.length -[0];
+}
 
-console.log([1, 2, 3, 4].length -[0]);
+var lastElement = last([1, 2, 3, 4]);
+console.log('lastElement', lastElement);
 
 // Создать функцию getPositiveNumbers которая принимает массив чисел 
 // и возвращает массив положительных чисел найденных в исходном массиве.
@@ -110,16 +117,16 @@ console.log(getPositiveNumbers([1, -1, -2, 4, 5, -8]));
 // => true
 // isEven(7);
 // => false
-function isEven(num) {
-    
+var isEven = function(num) {
     if (num % 2 === 0) {
-        console.log(true)
+        return true;
     } else {
-        console.log(false)
+        return false;
     }
-} 
+}
 
-console.log(isEven(3))
+var evenNumber = isEven(2);
+console.log('evenNumber', evenNumber);
 
 // Создать функцию push которая принимает массив и произвольное значение 
 // и возвращает копию массива + произвольное значение (которое 
@@ -127,11 +134,12 @@ console.log(isEven(3))
 // Пример работы:
 // push([1, 2, 3, 4], 5);
 // => [1, 2, 3, 4, 5]
-function push(parameter1, parameter2) {
+var push = function(parameter1, parameter2) {
     return parameter1 + "," + parameter2
 }
 
-console.log(push([1, 2, 3], 4));
+var pushParameter = push([1, 2, 3], 4);
+console.log('pushParameter', pushParameter);
 
 // Создать функцию unshift которая принимает массив и произвольное 
 // значение и возвращает копию массива + произвольное значение 
@@ -151,13 +159,14 @@ console.log(unshift(0, [1, 2, 3]));
 // Пример работы:
 // pop([1, 2, 3, 4]);
 // => [1, 2, 3]
-function pop(arr) {
+var pop = function(arr) {
     if(arr.length > 0)
     arr.length = 3;
     return arr;
 }
 
-console.log(pop([1, 2, 3, 4]));
+var deleteLast = pop([1, 2, 3, 4]);
+console.log('deleteLast', deleteLast);
 
 // Создать функцию shift которая принимает массив и возвращает 
 // копию массива без первого значения.
@@ -189,7 +198,7 @@ console.log(compact([1, 2, 3, undefined, 4]));
 // Пример работы:
 // contains([1, 2, 3], 3);
 // => true
-function contains(arr, number) {
+var contains = function(arr, number) {
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] === number) {
             return true;
@@ -198,7 +207,8 @@ function contains(arr, number) {
     return false
 }
 
-console.log(contains([1, 2, 3], 4));
+var containsNumber = contains([1, 2, 3], 4);
+console.log('containsNumber', containsNumber);
 
 
 // Создать функцию without которая возвращает копию массива, в которой удалены все значения второго аргумента указанного при вызове функции.
