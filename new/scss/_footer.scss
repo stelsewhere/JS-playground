@@ -1,0 +1,46 @@
+.footer {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .footer {
+
+        &__top {
+            flex-direction: column;
+        }
+
+        &__column:not(:last-child) {
+            border-bottom: 1px solid rgb(235, 235, 235);
+        }
+
+        &__title::after {
+            content: url("/img/arrow.svg");
+            position: absolute;
+            right: 0;
+            margin-top: -15px;
+            display: block;
+        }
+
+        &__list {
+            display: none;
+        }
+    }
+
+    .socials {
+        display: flex;
+    }
+
+    .show {
+        display: block;
+    }
+}
