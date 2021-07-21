@@ -205,6 +205,14 @@ a {
     display: block;
   }
 
+  .mobile__search {
+    background-image: url("/img/search.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 14px;
+  }
+
   .close-icon {
     background-image: url("/img/close.svg");
     background-position: center;
@@ -272,5 +280,15 @@ a {
 
   .show {
     display: block;
+  }
+
+  .expanded::after {
+    content: url("/img/arrow.svg");
+    position: absolute;
+    right: 3px;
+    margin-top: -15px;
+    display: block;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }/*# sourceMappingURL=styles.css.map */

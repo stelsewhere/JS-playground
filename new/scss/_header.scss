@@ -84,6 +84,14 @@
           display: block;
       }
 
+      .mobile__search {
+        background-image: url('/img/search.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 14px;
+      }
+
       .close-icon {
           background-image: url('/img/close.svg');
           background-position: center;
