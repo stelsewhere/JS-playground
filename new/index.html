@@ -9,10 +9,59 @@
 </head>
 <body>
     <div class="site-container">
+        <div id="overlay" class="mobile-menu__wrapper">
+            <div class="mobile-menu__content">
+                    <div class="mobile-menu__top">
+                        <button class="close-btn btn-reset" onclick="closeNav()"></button>
+                        <a href="" class="mobile-menu__logo">
+                            <h2>Aurora</h2>
+                        </a>
+                    </div>
+                    <div class="nav-mobile__wrapper">
+                        <ul id="level1" class="nav-mobile__list nav-mobile--level-1">
+                            <li class="nav__item ">
+                                <button class="nav__btn btn-reset nav__item--level-1">Level 1</button>
+                            </li>
+                            <li class="nav__item ">
+                                <button class="nav__btn btn-reset nav__item--level-1">Level 1</button>
+                            </li>
+                        </ul>
+                        <ul id="level2" class="nav-mobile__list nav-mobile--level-2">
+                            <li class="nav__caption nav__item--level-2">
+                                <button class="caption caption-level-2 btn-reset">Caption Level 2</button>
+                                <a>View all</a>
+                            </li>
+                            <li class="nav__item nav__item--level-2">
+                                <button class="nav__btn btn-reset ">Level 2</button>
+                            </li>
+                        </ul>
+                        <ul id="level3" class="nav-mobile__list nav-mobile--level-3">
+                            <li class="nav__caption nav__item--level-3">
+                                <button class="caption caption-level-3 btn-reset">Caption Level 3</button>
+                                <a>View all</a>
+                            </li>
+                            <li class="nav__item nav__item--level-3">
+                                <button class="nav__btn btn-reset">Level 3</button>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="signin">
+                        <a href="" class="sign-in">Sign in</a>
+                        <a href="" class="sign-up">Register</a>
+                    </div>
+                    <div class="location">
+                        <a>Our stores</a>
+                    </div>
+                    <div class="delivery">
+                        <span>We deliver worldwide</span>
+                    </div>
+            </div>
+        </div>
         <div class="header-mobile mobile">
             <div class="mobile__top">
                 <div class="mobile__left">
-                    <button class="burger btn-reset mobile__burger">
+                    <button class="burger btn-reset mobile__burger" onclick="openNav()">
                         <span class="burger__line"></span>
                         <span class="burger__line"></span>
                         <span class="burger__line"></span>
@@ -32,6 +81,7 @@
                     <input type="search" id="search" name="search" placeholder="What are you looking for?">
                 </form>
             </div>
+            
         </div>
         <header class="header">
             <div class="container header__container">

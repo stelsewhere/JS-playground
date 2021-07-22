@@ -46,11 +46,11 @@
 
     .expanded::after {
         content: url("/img/arrow.svg");
-            position: absolute;
-            right: 3px;
-            margin-top: -15px;
-            display: block;
-            transform: rotate(90deg);
+        position: absolute;
+        right: 3px;
+        margin-top: -15px;
+        display: block;
+        transform: rotate(90deg);
     }
 
 }
