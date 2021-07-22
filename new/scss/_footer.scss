@@ -1,13 +1,41 @@
 .footer {
+    padding-top: 26px;
+
+    &__content {
+        padding: 0 280px;
+    }
 
     &__top {
         display: flex;
         justify-content: space-between;
+        padding-bottom: 30px;
     }
 
     &__item {
         display: flex;
         align-items: center;
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        font-family: "Cormorant";
+        font-size: 15px;
+        line-height: 130%;
+        width: 80%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &__image {
+        margin-right: 14px;
+    }
+
+    &__bottom {
+        text-align: center;
+        font-size: 10px;
+        line-height: 95%;
+        padding-bottom: 17px;
     }
 }
 
@@ -38,6 +66,7 @@
 
     .socials {
         display: flex;
+
     }
 
     .show {

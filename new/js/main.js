@@ -59,11 +59,13 @@ var backToLevelOne = document.querySelector('.caption-level-2');
 var backToLevelTwo = document.querySelector('.caption-level-3');
 
 backToLevelOne.onclick = function() {
-  backToLevelOne.classList.toggle('nav-mobile--level-1')
+  document.getElementById('level2').style.display = "none"
+  document.getElementById('level1').style.display = "block"
+  document.getElementById('level3').style.display = "none"
 }
 
 backToLevelTwo.onclick = function() {
-  backToLevelTwo.classList.toggle('nav-mobile--level-2')
+  document.getElementById('level3').style.display = "none"
+  document.getElementById('level2').style.display = "block"
 }
-
 
