@@ -1,5 +1,5 @@
 
-// Menu
+// Open menu
 
 function openNav() {
     document.getElementById('overlay').style.width = "100%";
@@ -10,7 +10,7 @@ function closeNav() {
 }
 
 
-// Search
+// Show Search
 
 var search = function() {
     document.getElementById("show").classList.toggle("show-search"); 
@@ -18,7 +18,7 @@ var search = function() {
 }
 
 
-// footer 
+// Open Lists. Footer
 
 var showList = document.getElementsByClassName("footer__title");
 var i;
@@ -38,7 +38,7 @@ for (i = 0; i < showList.length; i++) {
 }
 
 
-// Menu navigation
+// Burger Menu Navigation
 
 document.querySelectorAll('.nav__item--level-1').forEach(item => {
 	item.addEventListener('click', event => {
@@ -51,9 +51,9 @@ document.querySelectorAll('.nav__item--level-2').forEach(item => {
 	item.addEventListener('click', event => {
 		document.getElementById('level3').style.display = "block"
     document.getElementById('level2').style.display = "none"
+    
 	})
 })
-
 
 var backToLevelOne = document.querySelector('.caption-level-2');
 var backToLevelTwo = document.querySelector('.caption-level-3');

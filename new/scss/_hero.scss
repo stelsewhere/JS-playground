@@ -3,6 +3,7 @@
     background-color: #eee;
     background-image: url('../img/hp-oh-hi.png');
     background-size: cover;
+    background-position: 0 25px;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -17,5 +18,18 @@
         color: white;
     }
 
+}
+
+@media (max-width: 960px) {
+
+    .hero {
+        min-height: 480px;
+        padding: 0 16px;
+        background-position: top center;
+
+        &__title {
+            display: none;
+        }
+    }
 }
 

@@ -1,5 +1,6 @@
 .footer {
     padding-top: 26px;
+    background: #F7F7F7;
 
     &__content {
         padding: 0 280px;
@@ -8,14 +9,17 @@
     &__top {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 30px;
+        padding-bottom: 35px;
     }
 
     &__item {
         display: flex;
         align-items: center;
-        font-size: 13px;
-        margin-bottom: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        line-height: 19px;
+        margin-bottom: 6px;
     }
 
     &__title {
@@ -24,7 +28,7 @@
         line-height: 130%;
         width: 80%;
         text-align: left;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     &__image {
@@ -35,16 +39,49 @@
         text-align: center;
         font-size: 10px;
         line-height: 95%;
-        padding-bottom: 17px;
+        padding-bottom: 10px;
+    }
+
+    &__link {
+        &:hover {
+            color: #F2DA91;
+            transition: 0.3s;
+        }
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
+    .footer {
+        &__content {
+        padding: 0 150px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        &__content {
+        padding: 0 100px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
 
     .footer {
+        padding-top: 10px;
+
+        &__content {
+            padding: 0px 16px;
+        }
 
         &__top {
             flex-direction: column;
+            padding-bottom: 10px;
+        }
+
+        &__bottom {
+            padding-bottom: 20px;
         }
 
         &__column:not(:last-child) {
@@ -54,19 +91,41 @@
         &__title::after {
             content: url("/img/arrow.svg");
             position: absolute;
-            right: 0;
-            margin-top: -15px;
+            right: 32px;
+            margin-top: -21px;
             display: block;
         }
 
         &__list {
             display: none;
+            padding-left: 16px;
+            padding-bottom: 6px;
         }
-    }
 
-    .socials {
-        display: flex;
+        &__column {
+            padding-top: 8px;
 
+            &--socials {
+                margin: 0 auto;
+                margin-top: 14px;
+            }
+        }
+
+        &__title {
+            padding-top: 6px;
+            padding-left: 16px;
+            line-height: 140%;
+            letter-spacing: 0.9px;
+
+            &:hover {
+                color: #F2DA91;
+                transition: 0.3s;
+            }
+        }
+
+        &__image {
+            margin-right: 20px;
+        }
     }
 
     .show {
@@ -76,10 +135,16 @@
     .expanded::after {
         content: url("/img/arrow.svg");
         position: absolute;
-        right: 3px;
-        margin-top: -15px;
+        right: 34px;
+        margin-top: -17px;
         display: block;
         transform: rotate(90deg);
     }
 
+    .socials {
+        display: inline-block;
+        &__title {
+            display: none;
+        }
+    }
 }

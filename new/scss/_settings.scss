@@ -53,7 +53,19 @@ a {
     background: transparent;
     cursor: pointer;
 }
-.container {
-	max-width: 1200;
-	margin: 0 auto;
+
+input {
+	border: 2px solid transparent;
+
+	&:hover {
+        border: 2px solid #f2da91;
+        background-color: rgb(240, 240, 240);
+        transition: 0.3s;
+    }
+
+    &:focus {
+        border: 2px solid transparent;
+        border-bottom: 2px solid #f2da91;
+		background-color: rgb(240, 240, 240);
+    }
 }
