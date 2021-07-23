@@ -172,7 +172,7 @@
 }
 
 .cart::before {
-    content: url('/img/cart.svg');
+    content: url('../img/cart.svg');
     position: absolute;
     right: 30px;
     top: -1px;
@@ -267,7 +267,7 @@
       }
 
       .mobile__search {
-        background-image: url('/img/search.svg');
+        background-image: url('../img/search.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -276,7 +276,7 @@
       }
 
       .close-icon {
-          background-image: url('/img/close.svg');
+          background-image: url('../img/close.svg');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -322,7 +322,7 @@
     position:absolute;
     left: 16px;
     top: 24px;
-    background-image: url('/img/close.svg');
+    background-image: url('../img/close.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -331,7 +331,7 @@
 }
 
 .mobile__btn::after {
-    content: url('/img/arrow.svg');
+    content: url('../img/arrow.svg');
     position: absolute;
     right: 0;
     display: block;
@@ -400,7 +400,7 @@
 }
 
 .location::before {
-    content: url('/img/location.svg');
+    content: url('../img/location.svg');
     position: absolute;
     left: 16px;
     top: 18px;
@@ -421,7 +421,7 @@
     }
 
     &__item::after {
-        content: url('/img/arrow.svg');
+        content: url('../img/arrow.svg');
         position: absolute;
         right: 16px;
     }
@@ -478,7 +478,7 @@
     position: relative;
 
     &::before {
-        content: url('/img/back.svg');
+        content: url('../img/back.svg');
         position: absolute;
         left: 16px;
         top: 2px;
