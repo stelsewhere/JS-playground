@@ -1,0 +1,13 @@
+.header {
+    &__logo {
+        position: fixed;
+        top: 30px;
+        left: 50px;
+        width: 200px;
+
+        :hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    }
+}
