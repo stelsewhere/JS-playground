@@ -21,15 +21,19 @@ getRandomInt()
 // в этом диапазоне и выводит в out-2. Запустите эту функцию. 
 
 const out2 = document.querySelector('.out-2');
-let min = 888;
-let max = 900;
 
-function getRandomInt2() {
-    let rand2 = Math.floor(min + Math.random() * (max + 1 - min));
-    out2.innerHTML = rand2;
+function getRandomInt2(elem, min, max) {
+    elem.textContent = Math.floor(min + Math.random() * (max + 1 - min));
 }
 
-getRandomInt2()
+getRandomInt2(out2, 888, 900)
+
+//
+function showSum3(x, y, elem = '.out-1') {
+    document.querySelector(elem).textContent = x + y;
+}
+
+showSum3(3, 3, '.out-2')
 
 
 // Task 3.
@@ -49,7 +53,6 @@ function f2021() {
 
 
 function t3() {
-    // тут вызываете hello и f2021
     hello()
     f2021()
 }
@@ -80,14 +83,18 @@ function t4() {
     f2021();
 }
 
-// тут ваша функция t4_1
 
-// document.querySelector('.b-4').addEventListener('click', t4_1);
+function t4_1() {
+    document.querySelector('.b-4').addEventListener('click', t4);
+}
+
+t4_1()
 
 
 
 // Task 5
-// Устали? У нас есть две функции. Одна even, вторая odd. Напишите функцию t5, которая получает из input.i-5 число, проверяет его на четность и запускает even если число четное и odd если нет.
+// Устали? У нас есть две функции. Одна even, вторая odd. Напишите функцию t5, которая получает 
+// из input.i-5 число, проверяет его на четность и запускает even если число четное и odd если нет.
 
 const out5 = document.querySelector('.out-5');
 
@@ -99,19 +106,25 @@ function even() {
     out5.textContent = 'even';
 }
 
-function t5() {
-
-}
-
-document.querySelector('.b-5').addEventListener('click', t5);
+document.querySelector('.b-5').addEventListener('click', function () {
+    const s = document.querySelector('.i-5 ').value;
+    if (s % 2 === 0) {
+        return even()
+    };
+    return odd();
+})
 
 
 // Task 6
-// Давайте усложним задачу. У нас есть функцию getRandomInt2 которая использует переменные min, max выводит в out-2 случайное целое число. Напишите функцию t6, которая запускает getRandomInt2, после чего, получает из .out-2 сгенерированное число и определяет четное оно или нет. Если четное, запускает функцию even, если нет - odd. Обратите внимание, как написаны функции even, odd.
+// Давайте усложним задачу. У нас есть функцию getRandomInt2 которая использует переменные 
+// min, max выводит в out-2 случайное целое число. Напишите функцию t6, которая запускает 
+// getRandomInt2, после чего, получает из .out-2 сгенерированное число и определяет четное 
+// оно или нет. Если четное, запускает функцию even, если нет - odd. Обратите внимание, 
+// как написаны функции even, odd.
 
 const out6 = document.querySelector('.out-6');
 
-function t6() {
+document.querySelector('.b-6').addEventListener('click', function () {
     function odd() {
         out6.textContent = 'odd';
     }
@@ -120,11 +133,13 @@ function t6() {
     }
     let min = 10000;
     let max = 10099;
-    // тут запускаете getRandomInt2
+    getRandomInt2()
 
-}
 
-document.querySelector('.b-6').addEventListener('click', t6);
+
+})
+
+
 
 
 
