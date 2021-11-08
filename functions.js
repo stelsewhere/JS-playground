@@ -30,16 +30,18 @@ getRandomInt2(888, 900);
 
 const out3 = document.querySelector('.out-3');
 
-function t3() {
-    function hello() {
-        out3.innerHTML = 'Hello ';
-    }
-
-    function f2021() {
-        out3.innerHTML += 2021;
-    }
+function hello() {
+    out3.innerHTML = 'Hello ';
 }
 
+function f2021() {
+    out3.innerHTML += 2021;
+}
+
+function t3() {
+    hello();
+    f2021()
+}
 document.querySelector('.b-3').addEventListener('click', t3);
 
 // Task 4
@@ -102,34 +104,46 @@ document.querySelector('.b-5').addEventListener('click', t5);
 
 
 // Task 6
-// Давайте усложним задачу. У нас есть функцию getRandomInt2 которая использует переменные min, max выводит в out-2 случайное целое число. Напишите функцию t6, которая запускает getRandomInt2, после чего, получает из .out-2 сгенерированное число и определяет четное оно или нет. Если четное, запускает функцию even, если нет - odd. Обратите внимание, как написаны функции even, odd.
+// Давайте усложним задачу. У нас есть функцию getRandomInt2 которая использует 
+// переменные min, max выводит в out-2 случайное целое число. Напишите функцию t6, 
+// которая запускает getRandomInt2, после чего, получает из .out-2 сгенерированное 
+// число и определяет четное оно или нет. Если четное, запускает функцию even, 
+// если нет - odd. Обратите внимание, как написаны функции even, odd.
 
 const out6 = document.querySelector('.out-6');
 
-function t6() {
-    function odd() {
-        out6.textContent = 'odd';
-    }
-    function even() {
-        out6.textContent = 'even';
-    }
+function t6(rand) {
+
     let min = 10000;
     let max = 10099;
-    // тут запускаете getRandomInt2
+    if (rand % 2 === 0) {
+        return even;
+    }
+    else {
+        return odd;
+    }
 
 }
-
+t6(getRandomInt2);
 document.querySelector('.b-6').addEventListener('click', t6);
 
 
 
 // Task 7
-// Дана переменная z7 равная 91. При клике по кнопке b-7 запускается функция t7, которая увеличивает переменную z7 на единицу и выводит в out-7. Добавьте условие, что если z7 равна 100, то дальше мы не увеличиваем значение z7.
+// Переменная z7 равная 91. При клике по кнопке b-7 запускается функция t7, 
+// которая увеличивает переменную z7 на единицу и выводит в out-7. Добавьте условие, 
+// что если z7 равна 100, то дальше мы не увеличиваем значение z7.
 
 const out7 = document.querySelector('.out-7');
 let z7 = 91;
 
 function t7() {
+    if (z7 == 100) {
+        console.log(z7)
+        return
+    }
+    z7++;
+    console.log(out7.innerHTML = z7);
 
 }
 
@@ -138,7 +152,9 @@ document.querySelector('.b-7').addEventListener('click', t7);
 
 
 // Task 8
-// Дана переменная z8 равная 0. Напишите функцию t8, которая при клике по .b-8 увеличивает z8 на единицу и запускает функцию showNumber. Если число z8 равно 9, то при последующем клике становится равным 0.
+// Дана переменная z8 равная 0. Напишите функцию t8, которая при клике по .b-8 
+// увеличивает z8 на единицу и запускает функцию showNumber. Если число z8 равно 9, 
+// то при последующем клике становится равным 0.
 
 const out8 = document.querySelector('.out-8');
 const digit = ['нуль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять'];
