@@ -112,12 +112,16 @@ document.querySelector('.b-5').addEventListener('click', t5);
 
 const out6 = document.querySelector('.out-6');
 
-function t6(rand) {
+function t6() {
 
     let min = 10000;
     let max = 10099;
+
+    let rand = getRandomInt2;
     if (rand % 2 === 0) {
-        return even;
+        return function even() {
+            out6.textContent = 'even';
+        };
     }
     else {
         return odd;
@@ -204,3 +208,38 @@ function t10() {
 
 document.querySelector('.b-10').addEventListener('click', t10);
 
+// Pure functions
+function squad(n) {
+    return n ** 2;
+}
+console.log(squad(4));
+
+// Impure functions
+let a = 0;
+function myCount() {
+    return count++;
+}
+console.log(myCount());
+
+// High order functions
+function pOdd() {
+    console.log('odd');
+}
+function pEven() {
+    console.log('even');
+}
+function myFunction(n, odd, even) {
+    if (n % 2 === 0) return even;
+    else return odd;
+}
+console.log(myFunction(4, pOdd, pEven));
+
+// Closure
+function closure() {
+    let a = 0;
+    return function () {
+        a += 1
+        return a;
+    }
+}
+console.log(closure());
